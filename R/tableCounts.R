@@ -123,7 +123,7 @@ tableCounts <- function(gammalist, nobs.a, nobs.b, n.cores = NULL) {
         temp <- do.call('rbind', gammas_mat)
     }
     
-    rm(gammas); rm(gammas_mat); gc()
+    rm(gammas); rm(gammas_mat)
 
     counts.f <- as.matrix(tapply(as.numeric(temp[, 2]), temp[, 1], sum))
     counts.d <- cbind( as.numeric(row.names(counts.f)), counts.f)
