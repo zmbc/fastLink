@@ -147,8 +147,6 @@ gammaCKpar <- function(matAp, matBp, n.cores = NULL, cut.a = 0.92, cut.p = 0.88,
         stringvec(temp.1[[r1]], temp.2[[r2]], c(cut.a, cut.p))
     }
 
-    gc()
-
     reshape2 <- function(s) { s[[1]] }
     reshape1 <- function(s) { s[[2]] }
     temp.2 <- lapply(temp.f, reshape2)
